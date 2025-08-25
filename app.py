@@ -459,18 +459,6 @@ else:
     with st.expander("Preview filtered data (first 500 rows)"):
         st.dataframe(df.head(500), use_container_width=True)
 
-    # Provide merged file download (filtered to >=30s)
-    @st.cache_data
-    def to_csv_bytes(_df: pd.DataFrame) -> bytes:
-        return _df.to_csv(index=False).encode("utf-8")
-
-    st.download_button(
-        label="Download filtered merged dataset (CSV)",
-        data=to_csv_bytes(df),
-        file_name="merged_calls_filtered_30s.csv",
-        mime="text/csv",
-    )
-
 # ---------------------------
 # Recommendations (verbatim)
 # ---------------------------
