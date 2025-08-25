@@ -120,7 +120,7 @@ def total_cost(n: int, per_call_cost: float) -> float:
 # ============================================================
 # Streamlit App
 # ============================================================
-st.title("📊 Statistical Justification for Call Sampling")
+st.title("📊 Statistical Analysis for Call Sampling")
 
 # ---------------------------
 # Objectives (verbatim)
